@@ -1,3 +1,10 @@
+/* 
+$breakpoint argument choices:
+- phone
+- tab-port
+- tab-land
+- big-desktop
+*/
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 *,
 *::before,
@@ -9,6 +16,18 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; }
+  @media (min-width: 112.5em) {
+    html {
+      font-size: 70%; } }
+  @media (max-width: 87.5em) {
+    html {
+      font-size: 56.25%; } }
+  @media (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
+  @media (max-width: 37.5em) {
+    html {
+      font-size: 40%; } }
 
 body {
   font-size: 1.4rem;
@@ -25,26 +44,49 @@ body {
   background-image: url(../images/bg-desktop.png);
   background-repeat: no-repeat;
   background-position: bottom; }
+  @media (max-width: 37.5em) {
+    .main {
+      background-image: url(../images/bg-mobile.png);
+      background-position: center; } }
   .main__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
-    min-width: 37.5rem;
     width: 62vw;
     height: 25vh; }
+    @media (max-width: 62.5em) {
+      .main__container {
+        width: 80vw; } }
+    @media (max-width: 37.5em) {
+      .main__container {
+        height: 60vh;
+        width: 90vw;
+        flex-direction: column; } }
     .main__container .header {
       flex-basis: 35%;
       height: 100%;
       background-color: #1d2c67;
       border-radius: 1.5rem;
       border-top-right-radius: 9rem; }
+      @media (max-width: 37.5em) {
+        .main__container .header {
+          flex-basis: 50%;
+          width: 100%; } }
       .main__container .header__logo {
-        margin: 15% 10% 8%; }
+        margin: 3rem 3rem 2rem;
+        height: 5.5rem; }
+        @media (max-width: 37.5em) {
+          .main__container .header__logo {
+            margin: 10% 12% 4rem;
+            height: 6.5rem; } }
       .main__container .header__nav {
-        width: 55%;
-        margin-left: 10%;
+        width: 20rem;
         display: flex;
         justify-content: space-between; }
+        @media (max-width: 37.5em) {
+          .main__container .header__nav {
+            margin-left: 12%;
+            width: 27rem; } }
         .main__container .header__nav-box {
           padding: 1rem;
           background-color: #0c122c;
@@ -52,6 +94,9 @@ body {
           display: flex;
           justify-content: center;
           align-items: center; }
+          @media (max-width: 37.5em) {
+            .main__container .header__nav-box {
+              padding: 2rem; } }
         .main__container .header__nav-box:hover {
           cursor: pointer; }
     .main__container .content {
@@ -65,6 +110,11 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: flex-start; }
+      @media (max-width: 37.5em) {
+        .main__container .content {
+          flex-basis: 45%;
+          width: 100%;
+          font-size: 2.5rem; } }
       .main__container .content__info-used {
         font-weight: 700; }
       .main__container .content__cloud {
@@ -84,6 +134,17 @@ body {
         font-size: 2.5em;
         font-weight: 700;
         clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 100% 100%, 90% 75%, 0% 75%); }
+        @media (max-width: 37.5em) {
+          .main__container .content__cloud {
+            height: 10rem;
+            width: 25rem;
+            top: 100%;
+            left: 50%;
+            padding-bottom: 1rem;
+            transform: translate(-50%, -50%);
+            clip-path: none;
+            border-bottom-left-radius: 0;
+            border-radius: 1rem; } }
         .main__container .content__cloud-value {
           color: #0c122c; }
           .main__container .content__cloud-value-desc {

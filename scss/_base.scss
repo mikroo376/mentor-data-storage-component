@@ -11,6 +11,19 @@
 html {
   box-sizing: border-box;
   font-size: 62.5%; // 10px
+
+  @include respond(big-desktop) {
+    font-size: 70%;
+  }
+  @include respond(tab-land) {
+    font-size: 56.25%;
+  }
+  @include respond(tab-port) {
+    font-size: 50%;
+  }
+  @include respond(phone) {
+    font-size: 40%;
+  }
 }
 
 body {
@@ -30,14 +43,28 @@ body {
   background-repeat: no-repeat;
   background-position: bottom;
 
+  @include respond(phone) {
+    background-image: url(../images/bg-mobile.png);
+    background-position: center;
+  }
+
   &__container {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
     // border: 2px solid green;
-    min-width: 37.5rem;
+
     width: 62vw;
     height: 25vh;
+
+    @include respond(tab-port) {
+      width: 80vw;
+    }
+    @include respond(phone) {
+      height: 60vh;
+      width: 90vw;
+      flex-direction: column;
+    }
 
     .header {
       flex-basis: 35%;
@@ -47,18 +74,33 @@ body {
       border-radius: 1.5rem;
       border-top-right-radius: 9rem;
 
+      @include respond(phone) {
+        flex-basis: 50%;
+        width: 100%;
+      }
+
       &__logo {
-        // margin-top: 15%;
-        // margin-left: 10%;
-        margin: 15% 10% 8%;
+        margin: 3rem 3rem 2rem;
+        height: 5.5rem;
+
+        @include respond(phone) {
+          margin: 10% 12% 4rem;
+
+          height: 6.5rem;
+        }
       }
 
       &__nav {
-        width: 55%;
-        margin-left: 10%;
+        width: 20rem;
 
         display: flex;
         justify-content: space-between;
+
+        @include respond(phone) {
+          margin-left: 12%;
+
+          width: 27rem;
+        }
 
         &-box {
           padding: 1rem;
@@ -68,6 +110,10 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+
+          @include respond(phone) {
+            padding: 2rem;
+          }
         }
 
         &-box:hover {
@@ -88,6 +134,12 @@ body {
       flex-direction: column;
       justify-content: space-evenly;
       align-items: flex-start;
+
+      @include respond(phone) {
+        flex-basis: 45%;
+        width: 100%;
+        font-size: 2.5rem;
+      }
 
       &__info {
         &-used {
@@ -123,6 +175,18 @@ body {
           90% 75%,
           0% 75%
         );
+
+        @include respond(phone) {
+          height: 10rem;
+          width: 25rem;
+          top: 100%;
+          left: 50%;
+          padding-bottom: 1rem;
+          transform: translate(-50%, -50%);
+          clip-path: none;
+          border-bottom-left-radius: 0;
+          border-radius: 1rem;
+        }
 
         &-value {
           color: $blue-color-dark;
