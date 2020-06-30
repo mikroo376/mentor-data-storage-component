@@ -4,8 +4,13 @@
   "description": "![Design preview for the Fylo data storage component coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "scss": "node-sass --watch scss -o css"
   },
   "author": "Mikro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "node-sass": "^4.14.1",
+    "sass": "^1.26.9"
+  }
 }

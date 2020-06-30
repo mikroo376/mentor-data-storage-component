@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; }
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; }
+
+body {
+  font-size: 1.4rem;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #dddbff; }
+
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #0c122c;
+  background-image: url(../images/bg-desktop.png);
+  background-repeat: no-repeat;
+  background-position: bottom; }
+  .main__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    min-width: 37.5rem;
+    width: 62vw;
+    height: 25vh; }
+    .main__container .header {
+      flex-basis: 35%;
+      height: 100%;
+      background-color: #1d2c67;
+      border-radius: 1.5rem;
+      border-top-right-radius: 9rem; }
+      .main__container .header__logo {
+        margin: 15% 10% 8%; }
+      .main__container .header__nav {
+        width: 55%;
+        margin-left: 10%;
+        display: flex;
+        justify-content: space-between; }
+        .main__container .header__nav-box {
+          padding: 1rem;
+          background-color: #0c122c;
+          border-radius: 1rem;
+          display: flex;
+          justify-content: center;
+          align-items: center; }
+        .main__container .header__nav-box:hover {
+          cursor: pointer; }
+    .main__container .content {
+      position: relative;
+      flex-basis: 60%;
+      padding: 4rem;
+      height: 80%;
+      border-radius: 1.5rem;
+      background-color: #1d2c67;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      align-items: flex-start; }
+      .main__container .content__info-used {
+        font-weight: 700; }
+      .main__container .content__cloud {
+        position: absolute;
+        padding-bottom: 2rem;
+        top: -3rem;
+        right: 4rem;
+        background-color: #fff;
+        height: 8rem;
+        width: 17rem;
+        border-radius: 0.8rem;
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 43%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 2.5em;
+        font-weight: 700;
+        clip-path: polygon(0% 0%, 100% 0%, 100% 75%, 100% 75%, 100% 100%, 90% 75%, 0% 75%); }
+        .main__container .content__cloud-value {
+          color: #0c122c; }
+          .main__container .content__cloud-value-desc {
+            font-size: 0.3em;
+            color: #848794; }
+      .main__container .content__graph {
+        display: flex;
+        align-items: center;
+        background-color: #0c122c;
+        border-radius: 2rem;
+        width: 100%;
+        height: 2rem; }
+        .main__container .content__graph-gradient {
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-left: 0.3rem;
+          height: 1.4rem;
+          width: 75%;
+          border-radius: 2rem;
+          background: linear-gradient(to right, #ffa399, #ff4d97); }
+          .main__container .content__graph-gradient-dot {
+            height: 1.1rem;
+            width: 1.1rem;
+            border-radius: 10rem;
+            background-color: #fff;
+            margin-right: 0.2rem; }
+      .main__container .content__limits {
+        width: 100%;
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between; }
