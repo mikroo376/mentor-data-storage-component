@@ -81,6 +81,7 @@ body {
             height: 6.5rem; } }
       .main__container .header__nav {
         width: 20rem;
+        margin-left: 12%;
         display: flex;
         justify-content: space-between; }
         @media (max-width: 37.5em) {
